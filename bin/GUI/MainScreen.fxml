@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import org.controlsfx.control.GridView?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FlexiRent.controller.MainScreenController">
+   <children>
+      <MenuBar>
+        <menus>
+            <Menu mnemonicParsing="false" text="Menu">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#importFile" text="Import" />
+                  <MenuItem mnemonicParsing="false" onAction="#exportFile" text="Export" />
+                  <MenuItem mnemonicParsing="false" onAction="#exit" text="Exit" />
+              </items>
+            </Menu>
+          
+        </menus>
+      </MenuBar>
+      <Button mnemonicParsing="false" onAction="#addProperty" text="Add Properties">
+               <HBox.margin>
+                  <Insets top="20.0" bottom="20.0" left="90.0" right="10.0" />
+               </HBox.margin></Button>
+      <HBox>
+         <children>
+            <Label text="Filters">
+               <HBox.margin>
+                  <Insets left="10.0" right="10.0" top="5.0" />
+               </HBox.margin>
+            </Label>
+            <MenuButton fx:id="type" mnemonicParsing="false" text="Type">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#typeApartment" text="Apartment " />
+                <MenuItem mnemonicParsing="false" onAction="#typePremiumSuite" text="Premium Suite" />
+              </items>
+               <HBox.margin>
+                  <Insets left="10.0" right="10.0" />
+               </HBox.margin>
+            </MenuButton>
+            <MenuButton fx:id="no_rooms" mnemonicParsing="false" text="No of rooms">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#room1" text="1 Room" />
+                <MenuItem mnemonicParsing="false" onAction="#room2" text="2 Room" />
+                  <MenuItem mnemonicParsing="false" onAction="#room3" text="3 Room" />
+              </items>
+               <HBox.margin>
+                  <Insets left="10.0" right="10.0" />
+               </HBox.margin>
+            </MenuButton>
+            <MenuButton fx:id="status" mnemonicParsing="false" text="Status">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#OnAvailable" text="Available" />
+                <MenuItem mnemonicParsing="false" onAction="#OnRented" text="Rented" />
+                  <MenuItem mnemonicParsing="false" onAction="#OnMaintainance" text="Maintainance" />
+              </items>
+               <HBox.margin>
+                  <Insets left="10.0" right="10.0" />
+               </HBox.margin>
+            </MenuButton>
+            <Button mnemonicParsing="false" onAction="#Search" text="All Properties">
+               <HBox.margin>
+                  <Insets left="10.0" right="10.0" />
+               </HBox.margin></Button>
+         </children>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+      </HBox>
+      <GridView fx:id="listView"/>
+       
+   </children>
+</VBox>

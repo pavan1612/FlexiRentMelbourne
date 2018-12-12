@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FlexiRent.controller.AddPropertyController">
+   <children>
+      <MenuBar>
+        <menus>
+            <Menu mnemonicParsing="false" text="Import/Export">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#importFile" text="Import" />
+                  <MenuItem mnemonicParsing="false" onAction="#exportFile" text="Export" />
+              </items>
+            </Menu>
+          
+        </menus>
+      </MenuBar>
+      <Button mnemonicParsing="false" onAction="#goBack" text="GoBack">
+         <VBox.margin>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </VBox.margin>
+      </Button>
+      <GridPane prefHeight="350.0" prefWidth="760.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Number of rooms" GridPane.rowIndex="2" />
+            <Label text="Street number" GridPane.rowIndex="3" />
+            <Label text="Street name" GridPane.rowIndex="4" />
+            <Label text="Suburb" GridPane.rowIndex="5" />
+            <ChoiceBox fx:id="noOfRooms" prefHeight="26.0" prefWidth="376.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="St_No" prefHeight="26.0" prefWidth="168.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <TextField fx:id="St_name" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <TextField fx:id="suburb" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <Label text="Enter Property Details">
+               <font>
+                  <Font size="26.0" />
+               </font>
+            </Label>
+            <Label text="Property Type" GridPane.rowIndex="1" />
+            <ChoiceBox fx:id="TypeChoice" prefHeight="26.0" prefWidth="378.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label fx:id="lastLabel" text="Last Maintainance" GridPane.rowIndex="6" />
+            <Button mnemonicParsing="false" onAction="#ChooseImage" prefHeight="26.0" prefWidth="374.0" text="Image" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+            <DatePicker fx:id="LMDate" prefHeight="26.0" prefWidth="376.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+         </children>
+         <VBox.margin>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </VBox.margin>
+      </GridPane>
+      <ImageView fx:id="DefaultImage" fitHeight="236.0" fitWidth="391.0" pickOnBounds="true" preserveRatio="true">
+         <VBox.margin>
+            <Insets left="200.0" />
+         </VBox.margin></ImageView>
+      <Button mnemonicParsing="false" onAction="#AddProperty" text="AddProperty">
+         <VBox.margin>
+            <Insets left="650.0" top="20.0" />
+         </VBox.margin></Button>
+   </children>
+</VBox>
